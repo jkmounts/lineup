@@ -10,5 +10,5 @@ The lineup site will give users the ability to create a Starting 11 for Racing L
 5. Allow site users to select which player appears in which position, so that they may create their own lineups. 
 6. ?Export lineup in some type of image file so users can post to social media? - Not sure how feasible this is.
 
-##Contributions
+# Contributions
 If anyone stumbles upon this repo, I am open to any tips or suggestions as this is a learning project for me. Thanks!
