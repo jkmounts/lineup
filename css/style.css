@@ -1,0 +1,56 @@
+/* Normalize CSS */
+
+@import 'normalize.css';
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+/* Main Styles */
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+ body {
+    font-family: 'Oswald', sans-serif;
+ } 
+
+header {
+    background-color: #c5b5f2;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h1 {
+    margin: 0;
+}
+
+header p {
+    margin: .5em 0 1em;
+    padding: .25rem;
+    font-weight: 200;
+}
+
+/* Classes */
+
+.lineup {
+    width: 100%;
+    padding: 0 1em;
+    font-size: 1.5em;
+}
+
+.player-position, .player-name {
+    display: inline-block;
+}
+
+.player-position {
+    width: 3em;
+    font-weight: 600;
+}
+
+.lineup>div:nth-child(odd) {
+    background-color: rgb(206, 240, 214);
+}
