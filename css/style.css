@@ -54,3 +54,23 @@ header p {
 .lineup>div:nth-child(odd) {
     background-color: rgb(206, 240, 214);
 }
+
+.player-photo {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+
+    .player-photo {
+        display: inline-block;
+        padding: 5px;
+    }
+
+    .player-photo img {
+        border-radius: 50%;
+        width: 100%;
+        max-width: 100px;
+        height: auto;
+    }
+
+}
