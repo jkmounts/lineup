@@ -6,7 +6,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
 
-/* Main Styles */
+/* Border Box */
+
 html {
     box-sizing: border-box;
   }
@@ -14,9 +15,13 @@ html {
     box-sizing: inherit;
   }
 
- body {
+/* Main Styles */
+
+body {
     font-family: 'Oswald', sans-serif;
  } 
+
+ /*Header  */
 
 header {
     background-color: #c5b5f2;
@@ -34,21 +39,24 @@ header p {
     font-weight: 200;
 }
 
-/* Classes */
+/* Lineup */
 
 .lineup {
-    width: 100%;
     padding: 0 1em;
     font-size: 1.5em;
+    display: flex;
+    flex-direction: column;
 }
 
-.player-position, .player-name {
-    display: inline-block;
+.player {
+    display: flex;
+    align-items:center;
 }
 
 .player-position {
     width: 3em;
     font-weight: 600;
+    padding-left: .5em;
 }
 
 .lineup>div:nth-child(odd) {
@@ -59,18 +67,18 @@ header p {
     display: none;
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 400px) {
 
     .player-photo {
-        display: inline-block;
+        margin-left: auto;
+        display: flex;
         padding: 5px;
     }
 
     .player-photo img {
         border-radius: 50%;
-        width: 100%;
-        max-width: 100px;
-        height: auto;
+        width: 9vw;
+        max-width: 150px;
     }
 
 }
