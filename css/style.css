@@ -101,3 +101,37 @@ header p {
         max-width: 150px;
     }
 }
+
+/* Create visual formation at larger screen sizes */
+
+@media screen and (min-width: 600px) {
+
+    .position,
+    .hometown {
+        padding: 0;
+        margin: 0;
+    }
+
+    .goalkeepers,
+    .defenders,
+    .midfielders,
+    .forwards {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .player {
+        flex-direction: column;
+    }
+
+    .position {
+        order: -2;
+        width: auto;
+    }
+
+    .photo {
+        order: -1;
+        margin: 0;
+    }
+
+}
