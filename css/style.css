@@ -46,6 +46,7 @@ header p {
     flex-direction: column;
     justify-content: stretch;
     margin: 0 1em;
+    max-height: 100vh;
 }
 
 .lineup>div:nth-child(odd) {
