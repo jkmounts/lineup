@@ -34,7 +34,7 @@ h1 {
 }
 
 header p {
-    margin: .5em 0 1em;
+    margin: .5em 0;
     padding: .25rem;
     font-weight: 200;
 }
@@ -42,10 +42,14 @@ header p {
 /* Lineup */
 
 .lineup {
-    padding: 0 1em;
-    font-size: 1.5em;
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
+    margin: 0 1em;
+}
+
+.lineup>div:nth-child(odd) {
+    background-color: rgb(206, 240, 214);
 }
 
 .player {
@@ -53,32 +57,47 @@ header p {
     align-items:center;
 }
 
-.player-position {
+.position {
     width: 3em;
     font-weight: 600;
     padding-left: .5em;
+    font-size: 1.5em;
 }
 
-.lineup>div:nth-child(odd) {
-    background-color: rgb(206, 240, 214);
+.name {
+    font-size: 1.5em;
 }
 
-.player-photo {
+.hometown {
+    font-size: .75em;
+    font-weight: 200;
+    margin-left: 10px;
     display: none;
+}
+
+.photo {
+    display: none;
+}
+
+@media screen and (min-width: 300px) {
+
+    .hometown {
+        display: inline-flex;
+    }
 }
 
 @media screen and (min-width: 400px) {
 
-    .player-photo {
-        margin-left: auto;
+
+    .photo {
         display: flex;
         padding: 5px;
+        margin-left: auto;
     }
 
-    .player-photo img {
+    .photo img {
         border-radius: 50%;
         width: 9vw;
         max-width: 150px;
     }
-
 }
