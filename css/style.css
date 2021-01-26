@@ -98,6 +98,8 @@ header p {
     .photo img {
         border-radius: 50%;
         width: 9vw;
+        height: 9vw;
+        object-fit: cover;
         max-width: 150px;
     }
 }
