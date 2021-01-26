@@ -2,8 +2,11 @@
 
 
 for (let i=1; i<=11; i++){
-    let currentPlayer = document.querySelector(`#player-${i}-name`);
-    currentPlayer.addEventListener('input', function(event) {
-        console.log(event.target.value);
+    let currentPlayerSlot = document.querySelector(`#player-${i}-name`);
+
+    currentPlayerSlot.addEventListener('input', function(event) {
+        let selectedPlayerIndex = event.target.value;
+        let currentHometownSlot = document.querySelector(`#player-${i} .hometown`);
+        let currentPhotoSlot = document.querySelector(`#player-${i} .photo`);
     });
 };
