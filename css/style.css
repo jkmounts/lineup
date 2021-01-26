@@ -64,10 +64,6 @@ header p {
     font-size: 1.5em;
 }
 
-.name {
-    font-size: 1.5em;
-}
-
 .hometown {
     font-size: .75em;
     font-weight: 200;
@@ -77,6 +73,20 @@ header p {
 
 .photo {
     display: none;
+}
+
+/* Select Box Styles */
+.name {
+    font-size: 1.5em;
+}
+
+select {
+    border: none;
+    background-color: transparent;
+}
+
+select:hover {
+    background-color: #c5b5f2;
 }
 
 @media screen and (min-width: 300px) {
@@ -124,6 +134,11 @@ header p {
 
     .player {
         flex-direction: column;
+    }
+
+    select {
+        text-align: center;
+        text-align-last: center;
     }
 
     .position {
