@@ -46,7 +46,6 @@ header p {
     flex-direction: column;
     justify-content: stretch;
     margin: 0 1em;
-    max-height: 100vh;
 }
 
 .lineup>div:nth-child(odd) {
@@ -136,7 +135,8 @@ header p {
     }
 
     .lineup {
-        flex-flow: row wrap;
+        flex-flow: row wrap-reverse;
+        background:  rgb(206, 240, 214);
     }
 
     #player-1 {
