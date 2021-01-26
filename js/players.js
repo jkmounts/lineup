@@ -1,5 +1,11 @@
 const players = [
     {
+        name: 'Select Player',
+        position: '',
+        hometown: '',
+        photo: ''
+    },
+    {
         name: 'Michelle Betos',
         position: 'GK',
         hometown: 'New York City',
