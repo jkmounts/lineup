@@ -1,0 +1,183 @@
+/* Normalize CSS */
+
+@import 'normalize.css';
+
+/* Fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&display=swap');
+
+/* Border Box */
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+/* Main Styles */
+
+body {
+    font-family: 'Oswald', sans-serif;
+ } 
+
+ /*Header  */
+
+header {
+    background-color: #c5b5f2;
+    text-align: center;
+    font-size: 1.25em;
+}
+
+h1 {
+    margin: 0;
+}
+
+header p {
+    margin: .5em 0;
+    padding: .25rem;
+    font-weight: 200;
+}
+
+/* Lineup */
+
+.lineup {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin: 0 1em;
+}
+
+.lineup>div:nth-child(odd) {
+    background-color: rgb(206, 240, 214);
+}
+
+.player {
+    display: flex;
+    align-items:center;
+}
+
+.position {
+    width: 3em;
+    font-weight: 600;
+    padding-left: .5em;
+    font-size: 1.5em;
+}
+
+.hometown {
+    font-size: .75em;
+    font-weight: 200;
+    margin-left: 10px;
+    display: none;
+}
+
+.photo {
+    display: none;
+}
+
+/* Select Box Styles */
+.name {
+    font-size: 1.5em;
+}
+
+select {
+    border: none;
+    background-color: transparent;
+}
+
+select:hover {
+    background-color: #c5b5f2;
+}
+
+@media screen and (min-width: 300px) {
+
+    .hometown {
+        display: inline-flex;
+    }
+}
+
+@media screen and (min-width: 400px) {
+
+
+    .photo {
+        display: flex;
+        padding: 5px;
+        margin-left: auto;
+    }
+
+    .photo img {
+        border-radius: 50%;
+        width: 9vw;
+        height: 9vw;
+        object-fit: cover;
+        max-width: 150px;
+    }
+}
+
+/* Create visual formation at larger screen sizes */
+
+@media screen and (min-width: 1000px) {
+
+    .position,
+    .hometown {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* .goalkeepers,
+    .defenders,
+    .midfielders,
+    .forwards {
+        display: flex;
+        justify-content: space-evenly;
+    } */
+
+    .player {
+        flex-direction: column;
+    }
+
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .position {
+        order: -2;
+        width: auto;
+    }
+
+    .photo {
+        order: -1;
+        margin: 0;
+    }
+
+    .lineup {
+        flex-flow: row wrap-reverse;
+        background:  rgb(206, 240, 214);
+    }
+
+    #player-1 {
+        flex-basis: 100%;
+    }
+
+    #player-2,
+    #player-3,
+    #player-4,
+    #player-5,
+    #player-6,
+    #player-7,
+    #player-8,
+    #player-9 {
+        flex-basis: 25%;
+    }
+
+    #player-10,
+    #player-11 {
+        flex-basis: 50%;
+    }
+
+    .lineup>div:nth-child(odd) {
+        background-color: transparent;
+    }
+
+}
