@@ -12,10 +12,16 @@
         <p>My starting 11:</p>
     </header>
 
+    <div class="formation-select">
+        <button type="button" autofocus>4-4-2</button>
+        <button type="button" onclick="changeFormation()">4-3-3</button>
+        <button type="button">4-2-3-1</button>
+    </div>
+
     <div class="lineup">
             <div class="player" id="player-1">
                 <div class="position">GK</div>
-                <select class="name" id='player-1-name' name='player-1-name' onchange="">
+                <select class="name" id='player-1-name' name='player-1-name'>
                     <!-- Use JS to insert player options here -->
                 </select>
                 <div class="hometown">New York City, NY</div>
@@ -132,5 +138,6 @@
     <script src="js/players.js"></script>
     <script src="js/player-selector.js"></script> 
     <script src="js/player-changer.js"></script> 
+    <script src="js/formations.js"></script>
 </body>
 </html>

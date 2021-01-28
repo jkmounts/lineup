@@ -39,7 +39,14 @@ header p {
     font-weight: 200;
 }
 
-/* Lineup */
+/* Formation Select Box Styles */
+
+.formation-select {
+    display: flex;
+    justify-content: center;
+}
+
+/* Lineup Box Styles*/
 
 .lineup {
     display: flex;
