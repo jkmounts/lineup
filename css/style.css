@@ -42,14 +42,22 @@ header p {
 
 .formation-select {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 10px 0px;
+    margin: 0 0 10px 0;
+    padding: 5px 0;
+}
+
+.formation-select p {
+    flex-basis: 100%;
 }
 
 button {
     background-color: #c5b5f2;
     border: 1px solid black;
     border-radius: 10px;
+    margin: .25em;
+    padding: .75em;
 }
 
 button:hover {
