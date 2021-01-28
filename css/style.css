@@ -46,6 +46,8 @@ header p {
     flex-direction: column;
     justify-content: stretch;
     margin: 0 1em;
+    border: 1px solid black;
+    border-radius: 25px;
 }
 
 .lineup>div:nth-child(odd) {
@@ -55,6 +57,14 @@ header p {
 .player {
     display: flex;
     align-items:center;
+}
+
+.player:first-child {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.player:last-child {
+    border-radius: 0px 0px 25px 25px;
 }
 
 .position {
@@ -75,17 +85,14 @@ header p {
     display: none;
 }
 
-/* Select Box Styles */
+/* Name Select Form Styles */
 .name {
     font-size: 1.5em;
-}
-
-select {
     border: none;
     background-color: transparent;
 }
 
-select:hover {
+.name:hover {
     background-color: #c5b5f2;
 }
 
@@ -111,11 +118,11 @@ select:hover {
         height: 9vw;
         object-fit: cover;
         max-width: 150px;
+        max-height: 150px;
     }
 }
 
-/* Create visual formation at larger screen sizes */
-
+/* Create visual 'on-field formation' at larger screen sizes */
 @media screen and (min-width: 1000px) {
 
     .position,
@@ -123,14 +130,6 @@ select:hover {
         padding: 0;
         margin: 0;
     }
-
-    /* .goalkeepers,
-    .defenders,
-    .midfielders,
-    .forwards {
-        display: flex;
-        justify-content: space-evenly;
-    } */
 
     .player {
         flex-direction: column;
