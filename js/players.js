@@ -2,8 +2,8 @@ const players = [
     {
         name: 'Select Player',
         position: '',
-        hometown: '',
-        photo: ''
+        hometown: 'Louisville, KY',
+        photo: 'img/racinglogo.svg'
     },
     {
         name: 'Michelle Betos',

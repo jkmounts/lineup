@@ -34,8 +34,7 @@ h1 {
 }
 
 header p {
-    margin: .5em 0;
-    padding: .25rem;
+    margin: .25em 0;
     font-weight: 200;
 }
 
@@ -44,6 +43,17 @@ header p {
 .formation-select {
     display: flex;
     justify-content: center;
+    margin: 10px 0px;
+}
+
+button {
+    background-color: #c5b5f2;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: blueviolet;
 }
 
 /* Lineup Box Styles*/
@@ -101,6 +111,13 @@ header p {
 
 .name:hover {
     background-color: #c5b5f2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: small;
+    font-weight: 200;
 }
 
 @media screen and (min-width: 300px) {

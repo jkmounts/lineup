@@ -9,14 +9,13 @@
 <body>
     <header>
         <h1>Racing Louisville FC</h1>
-        <p>My starting 11:</p>
+        <div class="formation-select">
+            <p>Select Formation:</p>
+            <button type="button" onclick="changeFormation(4,0,4,2)">4-4-2</button>
+            <button type="button" onclick="changeFormation(4,0,3,3)">4-3-3</button>
+            <button type="button" onclick="changeFormation(4,2,3,1)">4-2-3-1</button>
+        </div>
     </header>
-
-    <div class="formation-select">
-        <button type="button" onclick="changeFormation(4,0,4,2)">4-4-2</button>
-        <button type="button" onclick="changeFormation(4,0,3,3)">4-3-3</button>
-        <button type="button" onclick="changeFormation(4,2,3,1)">4-2-3-1</button>
-    </div>
 
     <div class="lineup">
             <div class="player" id="player-1">
@@ -24,7 +23,7 @@
                 <select class="name" id='player-1-name' name='player-1-name'>
                     <!-- Use JS to insert player options here -->
                 </select>
-                <div class="hometown">New York City, NY</div>
+                <div class="hometown">Louisville, KY</div>
                 <div class="photo">
                     <img src="img/racinglogo.svg">
                 </div>
@@ -132,7 +131,7 @@
         </div>
 
     <footer>
-        Created by Jestin Mounts
+        Page created by Jestin Mounts. Not associated with Racing Louisville FC or the NWSL
     </footer>
 
     <script src="js/players.js"></script>
