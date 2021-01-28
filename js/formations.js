@@ -2,51 +2,43 @@
 function changeFormation(d, dm, m, f) {
 
 // Create arrays to store what player-# divs should be which position
-    let goalkeeper = [];
-    let defenders = [];
-    let defensivemids = [];
-    let midfielders = [];
-    let forwards = [];
+    let goalkeeper = {abbreviation: 'GK', players: []};
+    let defenders = {abbreviation: 'D', players: []};
+    let defensivemids = {abbreviation: 'DM', players: []};
+    let midfielders = {abbreviation: 'M', players: []};
+    let forwards = {abbreviation: 'F', players: []};
 
 // Insert players into arrays based on d, dm, m, and f arguments ... Goalkeeper should always contain player 1
     for (let playerCounter = 1; playerCounter <= 11; playerCounter++) {
         if (playerCounter === 1) {
-            goalkeeper.push(`player-${playerCounter}`);
-        } else if ( d != 0 && defenders.length < d) {
-            defenders.push(`player-${playerCounter}`);
-        } else if (dm != 0 && defensivemids.length < dm ) {
-            defensivemids.push(`player-${playerCounter}`);
-        } else if (m != 0 && midfielders.length < m ) {
-            midfielders.push(`player-${playerCounter}`);
-        } else if (f != 0 && forwards.length < f ) {
-            forwards.push(`player-${playerCounter}`);
+            goalkeeper.players.push(`player-${playerCounter}`);
+        } else if ( d != 0 && defenders.players.length < d) {
+            defenders.players.push(`player-${playerCounter}`);
+        } else if (dm != 0 && defensivemids.players.length < dm ) {
+            defensivemids.players.push(`player-${playerCounter}`);
+        } else if (m != 0 && midfielders.players.length < m ) {
+            midfielders.players.push(`player-${playerCounter}`);
+        } else if (f != 0 && forwards.players.length < f ) {
+            forwards.players.push(`player-${playerCounter}`);
         }
     };
 
 // All players belonging to the same array should fit on the same row on the page by changing flex-basis
 // Listed position on page should change based on what array they belong to
-    for (let i=0; i < defenders.length ; i++) {
-        let player = document.getElementById(`${defenders[i]}`);
-        player.style.flexBasis = `${100 / defenders.length}%`;
-        let position = player.querySelector('.position');
-        position.innerHTML = 'D';
-    };
-    for (let i=0; i < defensivemids.length ; i++) {
-        let player = document.getElementById(`${defensivemids[i]}`);
-        player.style.flexBasis = `${100 / defensivemids.length}%`;
-        let position = player.querySelector('.position');
-        position.innerHTML = 'DM';
-    };
-    for (let i=0; i < midfielders.length ; i++) {
-        let player = document.getElementById(`${midfielders[i]}`);
-        player.style.flexBasis = `${100 / midfielders.length}%`;
-        let position = player.querySelector('.position');
-        position.innerHTML = 'M';
-    };
-    for (let i=0; i < forwards.length ; i++) {
-        let player = document.getElementById(`${forwards[i]}`);
-        player.style.flexBasis = `${100 / forwards.length}%`;
-        let position = player.querySelector('.position');
-        position.innerHTML = 'F';
-    };
+
+    function setupPlayerPositions(playersByPosition) {
+        for (let i=0; i<playersByPosition.players.length; i++){
+            let player = document.getElementById(`${playersByPosition.players[i]}`);
+            let playerWidth = `${100 / playersByPosition.players.length}%`;
+            let position = player.querySelector('.position');
+            player.style.flexBasis = playerWidth;
+            position.innerHTML = playersByPosition.abbreviation;
+        }
+    }
+
+    setupPlayerPositions(defenders);
+    setupPlayerPositions(defensivemids);
+    setupPlayerPositions(midfielders);
+    setupPlayerPositions(forwards);
+
 };
