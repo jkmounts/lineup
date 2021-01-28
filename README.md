@@ -1,14 +1,13 @@
 # Lineup
-This repository is being to host a project for my Code Louisville course.
-The lineup site will give users the ability to create a Starting 11 for Racing Louisville Football Club.
+This project allows user to create a starting lineup and formation for Racing Louisville FC, a soccer team that plays in the NWSL. On mobile screens, it lists 11 players and their positions in a column view and on a desktop, it will display the players similar to how they would lineup on a soccer field. Users can select which player from Racing Louisville's roster they would like at each position. They can also select which formation they would like to use. This changes the listed position on the page and also where they appear on desktop views. 
 
-## Goals
-1. Show a starting lineup with positions and player names.
-2. In mobile views, each players position and name should occupy its own row.
-3. In desktop view, I would like photos of the players to appear and maybe additional info like hometown or college.
-4. In desktop view, I would also like to explore making players appear in a chosen starting formation as they would lineup on a soccer pitch.
-5. Allow site users to select which player appears in which position, so that they may create their own lineups. 
-6. ?Export lineup in some type of image file so users can post to social media? - Not sure how feasible this is.
+## Current Features
+1. Uses JS to generate drop-down list of players that are stored in an object.
+2. Uses JS to change image and hometown elements on the page based on which option the user selects from the drop-down.
+3. Uses CSS Flex-box to display the players in a column view on smaller screens.
+4. Uses Media Query to add player photos once screen reaches a certain width.
+5. Uses Media Query to change flex-box properties on wider viewports. This view shows players where they would lineup on a soccer field.
+6. Added Formation Buttons. When user clicks a button, JS function runs to change HTML and flex-basis properties on elements.
 
-# Contributions
+## Contributions
 If anyone stumbles upon this repo, I am open to any tips or suggestions as this is a learning project for me. Thanks!
