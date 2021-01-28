@@ -1,5 +1,5 @@
 // Create Function taking arguments for number of players at each postion
-function changeFormation(d, dm, m, f) {
+function changeFormation(totalDefenders, totalDefensiveMids, totalMidfielders, totalForwards) {
 
 // Create arrays to store what player-# divs should be which position
     let goalkeeper = {abbreviation: 'GK', players: []};
@@ -8,23 +8,30 @@ function changeFormation(d, dm, m, f) {
     let midfielders = {abbreviation: 'M', players: []};
     let forwards = {abbreviation: 'F', players: []};
 
-// Insert players into arrays based on d, dm, m, and f arguments ... Goalkeeper should always contain player 1
-    for (let playerCounter = 1; playerCounter <= 11; playerCounter++) {
-        if (playerCounter === 1) {
-            goalkeeper.players.push(`player-${playerCounter}`);
-        } else if ( d != 0 && defenders.players.length < d) {
-            defenders.players.push(`player-${playerCounter}`);
-        } else if (dm != 0 && defensivemids.players.length < dm ) {
-            defensivemids.players.push(`player-${playerCounter}`);
-        } else if (m != 0 && midfielders.players.length < m ) {
-            midfielders.players.push(`player-${playerCounter}`);
-        } else if (f != 0 && forwards.players.length < f ) {
-            forwards.players.push(`player-${playerCounter}`);
+// Insert players into arrays based on changeFormation parameters ... Goalkeeper should always contain player 1
+    for (let whichPlayer = 1; whichPlayer <= 11; whichPlayer++) {
+
+        const isPlayerGoalie = whichPlayer === 1;
+        const hasDefenders = totalDefenders != 0;
+        const hasDefensiveMids = totalDefensiveMids != 0;
+        const hasMidfielders = totalMidfielders != 0;
+        const hasForwards = totalForwards !=0;
+
+        if (isPlayerGoalie) {
+            goalkeeper.players.push(`player-${whichPlayer}`);
+        } else if (hasDefenders && defenders.players.length < totalDefenders) {
+            defenders.players.push(`player-${whichPlayer}`);
+        } else if (hasDefensiveMids && defensivemids.players.length < totalDefensiveMids ) {
+            defensivemids.players.push(`player-${whichPlayer}`);
+        } else if (hasMidfielders && midfielders.players.length < totalMidfielders ) {
+            midfielders.players.push(`player-${whichPlayer}`);
+        } else if (hasForwards && forwards.players.length < totalForwards ) {
+            forwards.players.push(`player-${whichPlayer}`);
         }
     };
 
-// All players belonging to the same array should fit on the same row on the page by changing flex-basis
-// Listed position on page should change based on what array they belong to
+// All players belonging to the same object should fit on the same row on the page by changing flex-basis
+// Listed position on page should change based on what object they belong to
 
     function setupPlayerPositions(playersByPosition) {
         for (let i=0; i<playersByPosition.players.length; i++){
