@@ -138,8 +138,8 @@ footer {
 
     .photo img {
         border-radius: 50%;
-        width: 9vw;
-        height: 9vw;
+        width: 15vw;
+        height: 15vw;
         object-fit: cover;
         max-width: 150px;
         max-height: 150px;
@@ -157,6 +157,7 @@ footer {
 
     .player {
         flex-direction: column;
+        min-width: 20%;
     }
 
     select {
