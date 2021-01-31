@@ -19,6 +19,8 @@ html {
 
 body {
     font-family: 'Oswald', sans-serif;
+    display: flex;
+    flex-direction: column;
  } 
 
  /*Header  */
@@ -70,7 +72,7 @@ button:hover {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
-    margin: 0 1em;
+    margin: 1em;
     border: 1px solid black;
     border-radius: 25px;
 }
@@ -128,6 +130,7 @@ footer {
     font-weight: 200;
 }
 
+/* Add Hometown to player boxes at 300px */
 @media screen and (min-width: 300px) {
 
     .hometown {
@@ -135,6 +138,7 @@ footer {
     }
 }
 
+/* Add Images to Player Boxes at 450px */
 @media screen and (min-width: 450px) {
 
 
@@ -156,6 +160,10 @@ footer {
 
 /* Create visual 'on-field formation' at larger screen sizes */
 @media screen and (min-width: 1000px) {
+
+    body {
+        background: url(../img/lynnfamily.jpeg) no-repeat center/cover;
+    }
 
     .position,
     .hometown {
@@ -186,6 +194,9 @@ footer {
     .lineup {
         flex-flow: row wrap-reverse;
         background:  rgb(206, 240, 214);
+        width: 75%;
+        align-self: center;
+        max-width: 1300px;
     }
 
     #player-1 {
