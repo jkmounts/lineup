@@ -224,3 +224,9 @@ footer {
     }
 
 }
+
+/* Styles for Screenshot using Html2Canvas */
+
+canvas {
+    display: none;
+}

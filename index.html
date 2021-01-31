@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <title>Racing Louisville FC Starting 11</title>
+    <script src="js/html2canvas.js"></script>
+    <script src="js/screenshot.js"></script>
 </head>
 <body>
     <header>
@@ -17,9 +19,12 @@
             <button type="button" onclick="changeFormation(3,0,4,3)">3-4-3</button>
             <button type="button" onclick="changeFormation(3,2,3,2)">3-2-3-2</button>
         </div>
+        <div class="capture">
+            <button type="button" onclick="screenshot()">Capture</button>
+        </div>
     </header>
 
-    <div class="lineup">
+    <div class="lineup" id="lineup">
             <div class="player" id="player-1">
                 <div class="position">GK</div>
                 <select class="name" id='player-1-name' name='player-1-name'>
