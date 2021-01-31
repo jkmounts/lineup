@@ -24,12 +24,6 @@ const players = [
         photo: 'img/ashley.jpg'
     },
     {
-        name: 'Jennifer Cudjoe',
-        position: 'M',
-        hometown: 'Ghana',
-        photo: 'img/cudjoe.jpg'
-    },
-    {
         name: 'Caitlin Foord',
         position: 'F',
         hometown: 'Australia',
@@ -106,6 +100,71 @@ const players = [
         position: 'D',
         hometown: 'Oakhurst, NJ',
         photo: 'img/simon.jpg'
-    }
-    
+    },
+    {
+        name: 'Emina Ekic',
+        position: 'M',
+        hometown: 'Louisville, KY',
+        photo: 'img/ekic.jpg'
+    },
+    {
+        name: 'Emily Fox',
+        position: 'D',
+        hometown: 'Ashburn, VA',
+        photo: 'img/fox.jpg'
+    },
+    {
+        name: 'Brooke Hendrix',
+        position: 'D',
+        hometown: 'Sharpsburg, GA',
+        photo: 'img/hendrix.jpg'
+    },
+    {
+        name: 'Freja Olofsson',
+        position: 'M',
+        hometown: 'Sweden',
+        photo: 'img/olofsson.jpg'
+    },
+    {
+        name: 'Taylor Otto',
+        position: 'F',
+        hometown: 'Apex, NC',
+        photo: 'img/otto.jpg'
+    },
+    {
+        name: 'Emily Smith',
+        position: 'D',
+        hometown: 'Los Gatos, CA',
+        photo: 'img/smith.jpg'
+    },
+    {
+        name: 'Parker Goins',
+        position: 'F',
+        hometown: 'Broken Arrow, OK',
+        photo: 'img/goins.jpg'
+    },
+    {
+        name: 'Taylor Malham',
+        position: 'F',
+        hometown: 'Broken Arrow, OK',
+        photo: 'img/malham.jpg'
+    },
+    {
+        name: 'Sarah Sodoma',
+        position: 'F',
+        hometown: 'Manchester, MO',
+        photo: 'img/sodoma.jpg'
+    },
+    {
+        name: 'Jada Talley',
+        position: 'F',
+        hometown: 'Corona, CA',
+        photo: 'img/talley.jpg'
+    },
+    {
+        name: 'Kirsten Davis',
+        position: 'F',
+        hometown: 'St. Louis, MO',
+        photo: 'img/davis.jpg'
+    },
 ];
