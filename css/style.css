@@ -243,15 +243,15 @@ footer {
     position: absolute;
     top: 10px;
     right: 35px;
-    font-size: 35px;
+    font-size: 100px;
 }
 
 #lineupImage {
     position: relative;
     display: grid;
     margin: auto;
-    height: 100%;
-    max-width: 1000px;
+    max-height: 90%;
+    max-width: 75%;
 }
 
 canvas {
