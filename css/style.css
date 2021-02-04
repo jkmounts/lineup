@@ -225,7 +225,7 @@ footer {
 
 }
 
-/* Styles for Screenshot Modal using Html2Canvas */
+/* Styles for Screenshot Modal using Html2Canvas
 
 #screenshotContainer {
     display: none;
@@ -257,4 +257,4 @@ footer {
 canvas {
     max-width: 100%;
     max-height: 100vh;
-}
+} */
