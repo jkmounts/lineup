@@ -41,11 +41,10 @@ function changeFormation(totalDefenders, totalDefensiveMids, totalMidfielders, t
             player.style.flexBasis = playerWidth;
             position.innerHTML = playersByPosition.abbreviation;
         }
-    }
+    };
 
-    setupPlayerPositions(defenders);
-    setupPlayerPositions(defensivemids);
-    setupPlayerPositions(midfielders);
-    setupPlayerPositions(forwards);
+    const playerPositions = [defenders, defensivemids, midfielders, forwards];
+    playerPositions.forEach(setupPlayerPositions);
 
+    // Disable clicked button and undisable(?) the rest
 };
