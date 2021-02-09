@@ -66,6 +66,10 @@ button:hover {
     background-color: blueviolet;
 }
 
+.selected {
+    background-color: red;
+}
+
 /* Lineup Box Styles*/
 
 .lineup {

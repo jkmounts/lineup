@@ -46,5 +46,12 @@ function changeFormation(totalDefenders, totalDefensiveMids, totalMidfielders, t
     const playerPositions = [defenders, defensivemids, midfielders, forwards];
     playerPositions.forEach(setupPlayerPositions);
 
-    // Disable clicked button and undisable(?) the rest
+    // Highlight clicked button and unhighlight the rest
+    const formationButtons = document.querySelectorAll('.formation-select button');
+    function selectButton() {
+        this.classList.add('selected');
+    }
+
+    formationButtons.forEach(button => button.addEventListener('click', selectButton));
+
 };
