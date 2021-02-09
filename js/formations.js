@@ -46,12 +46,13 @@ function changeFormation(totalDefenders, totalDefensiveMids, totalMidfielders, t
     const playerPositions = [defenders, defensivemids, midfielders, forwards];
     playerPositions.forEach(setupPlayerPositions);
 
-    // Highlight clicked button and unhighlight the rest
-    const formationButtons = document.querySelectorAll('.formation-select button');
-    function selectButton() {
-        this.classList.add('selected');
-    }
-
-    formationButtons.forEach(button => button.addEventListener('click', selectButton));
-
 };
+
+// Highlight clicked button and unhighlight the rest
+const formationButtons = document.querySelectorAll('.formation-select button');
+function selectButton() {
+    formationButtons.forEach(button => button.classList.remove('selected'));
+    this.classList.add('selected');
+}
+
+formationButtons.forEach(button => button.addEventListener('click', selectButton));
