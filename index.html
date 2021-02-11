@@ -11,14 +11,6 @@
 <body>
     <header>
         <h1>Racing Louisville FC</h1>
-        <div class="formation-select">
-            <p>Select Formation:</p>
-            <button type="button" onclick="changeFormation(4,0,4,2)">4-4-2</button>
-            <button type="button" onclick="changeFormation(4,0,3,3)">4-3-3</button>
-            <button type="button" onclick="changeFormation(4,2,3,1)">4-2-3-1</button>
-            <button type="button" onclick="changeFormation(3,0,4,3)">3-4-3</button>
-            <button type="button" onclick="changeFormation(3,2,3,2)">3-2-3-2</button>
-        </div>
         <!-- Button for Screenshot -->
         <!-- <div class="capture">
             <button type="button" onclick="screenshot()">Capture</button>
@@ -33,6 +25,15 @@
            
         </div>
     </div> -->
+
+    <div class="formation-select">
+        <h2>Select Formation:</h2>
+        <button type="button" onclick="changeFormation(4,0,4,2)">4-4-2</button>
+        <button type="button" onclick="changeFormation(4,0,3,3)">4-3-3</button>
+        <button type="button" onclick="changeFormation(4,2,3,1)">4-2-3-1</button>
+        <button type="button" onclick="changeFormation(3,0,4,3)">3-4-3</button>
+        <button type="button" onclick="changeFormation(3,2,3,2)">3-2-3-2</button>
+    </div>
 
     <div class="lineup" id="lineup">
             <div class="player" id="player-1">
