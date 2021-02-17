@@ -239,11 +239,11 @@ footer {
 
 }
 
-/* Styles for Screenshot Modal using Html2Canvas
+/* Styles for Screenshot Modal using Html2Canvas */
 
 #screenshotContainer {
     display: none;
-    position:fixed;
+    position: fixed;
     left: 0;
     top: 0;
     width: 100%;
@@ -255,14 +255,13 @@ footer {
 .close {
     color:white;
     position: absolute;
+    z-index: 2;
     top: 10px;
     right: 35px;
     font-size: 100px;
 }
 
 #lineupImage {
-    position: relative;
-    display: grid;
     margin: auto;
     max-height: 90%;
     max-width: 75%;
@@ -271,4 +270,4 @@ footer {
 canvas {
     max-width: 100%;
     max-height: 100vh;
-} */
+}
