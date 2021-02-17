@@ -12,6 +12,6 @@ for (let i=1; i<=11; i++){
         let currentHometownSlot = document.querySelector(`#player-${i} .hometown`);
         let currentPhotoSlot = document.querySelector(`#player-${i} .photo`);
         currentHometownSlot.innerHTML = `${players[selectedPlayerIndex].hometown}`;
-        currentPhotoSlot.innerHTML = `<img src="${players[selectedPlayerIndex].photo}">`;
+        currentPhotoSlot.innerHTML = `<img src="${players[selectedPlayerIndex].photo}" alt="${players[selectedPlayerIndex].name}">`;
     });
 };
