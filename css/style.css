@@ -66,28 +66,19 @@ span:nth-child(1) {
 
 nav {
     display: none;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    padding: .2rem;
-    margin: 0px;
+    flex-direction: column;
 }
 
 nav a {
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
+    padding: 5px 0px;
 }
 
 nav a:hover {
     color: white;
 }
-
 
 /* Formation Select Box Styles */
 
@@ -223,6 +214,28 @@ footer {
         max-width: 150px;
         max-height: 150px;
         box-shadow: 2px 2px 8px #050018;
+    }
+}
+
+/* Put Nav into Banner at 800px */
+@media screen and (min-width: 800px) {
+    .hamburger {
+        display: none;
+    }
+    
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0px 10px;
     }
 }
 
