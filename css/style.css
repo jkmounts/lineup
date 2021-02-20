@@ -27,10 +27,16 @@ body {
 
 header {
     background-color: #c5b5f2;
-    text-align: center;
+    text-align: left;
     display: flex;
+    flex-flow: column nowrap;
+    padding: .75rem;
+}
+
+.mobile-banner {
+    display: flex;
+    flex-flow: row nowrap;
     justify-content: space-between;
-    padding: 1rem;
 }
 
 header h1 {
@@ -42,6 +48,7 @@ header h1 {
 
 .hamburger {
     margin-right: 10px;
+    align-self: flex-start;
 }
 
 .hamburger span {
@@ -66,8 +73,19 @@ nav ul {
     padding: 0;
 }
 
+nav ul li {
+    padding: .2rem;
+    margin: 0px;
+}
+
 nav a {
     text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+}
+
+nav a:hover {
+    color: white;
 }
 
 
