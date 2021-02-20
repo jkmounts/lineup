@@ -1,0 +1,21 @@
+#forwards {
+    display: flex;
+    flex-flow: row wrap;
+    flex-grow: 1;
+    align-content: stretch;
+    align-items: stretch;
+}
+
+#forwards h1 {
+    flex-basis: 100%;
+}
+
+.player {
+    height: 500px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.player-hometown {
+    display:none
+}

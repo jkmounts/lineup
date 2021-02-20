@@ -13,12 +13,16 @@ const goalkeepers = players.filter(player => player.position === 'GK');
 forwards.forEach(player => {
     const newDiv = document.createElement('div');;
     const playerName = document.createElement('h2');
+    playerName.classList.add('player-name');
     playerName.textContent = player.name;
     newDiv.appendChild(playerName);
     const playerHometown = document.createElement('h3');
+    playerHometown.classList.add('player-hometown');
     playerHometown.textContent = player.hometown;
     newDiv.appendChild(playerHometown);
-    forwardsDiv.appendChild(newDiv);
     const playerPhoto = player.photo;
-    newDiv.style.background = `url(${playerPhoto})`;
+    newDiv.style.backgroundImage = `url(${playerPhoto})`;
+    newDiv.classList.add('forward');
+    newDiv.classList.add('player');
+    forwardsDiv.appendChild(newDiv);
 });
