@@ -1,9 +1,12 @@
+@import 'normalize.css';
+
 #forwards {
     display: flex;
     flex-flow: row wrap;
-    flex-grow: 1;
-    align-content: stretch;
-    align-items: stretch;
+}
+
+#forwards>* {
+    flex: 1 1 auto;
 }
 
 #forwards h1 {
@@ -11,9 +14,15 @@
 }
 
 .player {
-    height: 500px;
+    height: 50vh;
+    min-height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.player-name {
+    writing-mode: vertical-rl;
+    margin: 0px;
 }
 
 .player-hometown {

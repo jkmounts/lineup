@@ -10,8 +10,9 @@ const midfielders = players.filter(player => player.position === 'M');
 const defenders = players.filter(player => player.position === 'D');
 const goalkeepers = players.filter(player => player.position === 'GK');
 
+// Create Divs for each player
 forwards.forEach(player => {
-    const newDiv = document.createElement('div');;
+    const newDiv = document.createElement('div');
     const playerName = document.createElement('h2');
     playerName.classList.add('player-name');
     playerName.textContent = player.name;
@@ -26,3 +27,11 @@ forwards.forEach(player => {
     newDiv.classList.add('player');
     forwardsDiv.appendChild(newDiv);
 });
+
+// Grow Player Box when clicked
+const playerBoxes = document.querySelectorAll('.player');
+function expandBox() {
+    playerBoxes.forEach(box => box.style.flexGrow = 1);
+    this.style.flexGrow = 10;
+};
+playerBoxes.forEach(box => box.addEventListener('click', expandBox));
