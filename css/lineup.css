@@ -1,0 +1,225 @@
+/* Formation Select Box Styles */
+
+.formation-select {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: stretch;
+    background: rgb(206, 240, 214);
+    width: 50%;
+    max-width: 900px;
+    align-self: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin-top: 1em;
+}
+
+.formation-select h2 {
+    flex-basis: 100%;
+    text-align: center;
+    font-size: 1.25em;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    background-color: #c5b5f2;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: .25em;
+    padding: .75em;
+}
+
+button:hover {
+    background-color: #050018;
+    color: white;
+}
+
+.selected {
+    background-color: #050018;
+    color: white;
+    font-weight: 600;
+}
+
+/* Lineup Box Styles*/
+
+.lineup {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    margin: 1em;
+    border: 3px solid #c5b5f2;
+    border-radius: 25px;
+}
+
+.lineup>div:nth-child(odd) {
+    background-color: rgb(206, 240, 214);
+}
+
+.player {
+    display: flex;
+    align-items:center;
+}
+
+.player:first-child {
+    border-radius: 25px 25px 0px 0px;
+}
+
+.player:last-child {
+    border-radius: 0px 0px 25px 25px;
+}
+
+.position {
+    width: 3em;
+    font-weight: 600;
+    padding-left: .5em;
+    font-size: 1.5em;
+}
+
+.hometown {
+    font-size: .75em;
+    font-weight: 200;
+    margin-left: 10px;
+    display: none;
+}
+
+.photo {
+    display: none;
+}
+
+/* Name Select Form Styles */
+.name {
+    font-size: 1.5em;
+    border: none;
+    background-color: transparent;
+}
+
+.name:hover {
+    background-color: #c5b5f2;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    font-size: small;
+    font-weight: 200;
+}
+
+/* Add Hometown to player boxes at 300px */
+@media screen and (min-width: 300px) {
+
+    .hometown {
+        display: inline-flex;
+    }
+}
+
+/* Add Images to Player Boxes at 450px */
+@media screen and (min-width: 450px) {
+
+
+    .photo {
+        display: flex;
+        padding: 5px;
+        margin-left: auto;
+    }
+
+    .photo img {
+        border-radius: 50%;
+        width: 15vw;
+        height: 15vw;
+        object-fit: cover;
+        max-width: 150px;
+        max-height: 150px;
+        box-shadow: 2px 2px 8px #050018;
+    }
+}
+
+/* Put Nav into Banner at 800px */
+@media screen and (min-width: 800px) {
+    .hamburger {
+        display: none;
+    }
+    
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 0px 10px;
+    }
+}
+
+/* Create visual 'on-field formation' at larger screen sizes */
+@media screen and (min-width: 1000px) {
+
+    body {
+        background: url(../img/lynnfamily.jpeg) no-repeat center/cover;
+    }
+
+    .position,
+    .hometown {
+        padding: 0;
+        margin: 0;
+    }
+
+    .player {
+        flex-direction: column;
+        min-width: 20%;
+    }
+
+    select {
+        text-align: center;
+        text-align-last: center;
+    }
+
+    .position {
+        order: -2;
+        width: auto;
+    }
+
+    .photo {
+        order: -1;
+        margin: 0;
+    }
+
+    .lineup {
+        flex-flow: row wrap-reverse;
+        background:  rgb(206, 240, 214);
+        width: 75%;
+        align-self: center;
+        max-width: 1300px;
+    }
+
+    #player-1 {
+        flex-basis: 100%;
+    }
+
+    #player-2,
+    #player-3,
+    #player-4,
+    #player-5,
+    #player-6,
+    #player-7,
+    #player-8,
+    #player-9 {
+        flex-basis: 25%;
+    }
+
+    #player-10,
+    #player-11 {
+        flex-basis: 50%;
+    }
+
+    .lineup>div:nth-child(odd) {
+        background-color: transparent;
+    }
+
+}

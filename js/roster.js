@@ -30,6 +30,7 @@ forwards.forEach(player => {
 
 // Grow Player Box when clicked
 const playerBoxes = document.querySelectorAll('.player');
+
 function expandBox() {
     playerBoxes.forEach(box => box.style.flexGrow = 1);
     this.style.flexGrow = 10;
