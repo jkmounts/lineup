@@ -6,7 +6,7 @@
 }
 
 #forwards>* {
-    flex: 1 1 auto;
+    flex: 1 1 0;
     transition: all 2s;
 }
 
@@ -15,12 +15,11 @@
 }
 
 .player {
-    height: 50vh;
     min-height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #c6b2f4;
-    background-blend-mode: overlay;
+    background-blend-mode:soft-light;
 } 
 
 .player-name {
