@@ -9,7 +9,8 @@ const players = [
         name: 'Michelle Betos',
         position: 'GK',
         hometown: 'New York City',
-        photo: 'img/betos.jpg'
+        photo: 'img/betos.jpg',
+        bio: "Prance along on top of the garden fence, annoy the neighbor's dog and make it bark play time, so lick master's hand at first then bite because im moody i do no work yet get food, shelter, and lots of stuff just like man who lives with us or run at 3am so cat gets stuck in tree firefighters try to get cat down firefighters get stuck in tree cat eats firefighters' slippers. Licks your face sit on human they not getting up ever this is the day for inspect anything brought into the house, but allways wanting food so meowing non stop for food. Stare at owner accusingly then wink scream for no reason at 4 am stand in doorway, unwilling to chose whether to stay in or go out for purrr purr littel cat, little cat purr purr murr i hate humans they are so annoying."
     },
     {
         name: 'Katie Lund',
@@ -27,7 +28,8 @@ const players = [
         name: 'Caitlin Foord',
         position: 'F',
         hometown: 'Australia',
-        photo: 'img/foord.jpg'
+        photo: 'img/foord.jpg',
+        bio: "Prance along on top of the garden fence, annoy the neighbor's dog and make it bark play time, so lick master's hand at first then bite because im moody i do no work yet get food, shelter, and lots of stuff just like man who lives with us or run at 3am so cat gets stuck in tree firefighters try to get cat down firefighters get stuck in tree cat eats firefighters' slippers. Licks your face sit on human they not getting up ever this is the day for inspect anything brought into the house, but allways wanting food so meowing non stop for food. Stare at owner accusingly then wink scream for no reason at 4 am stand in doorway, unwilling to chose whether to stay in or go out for purrr purr littel cat, little cat purr purr murr i hate humans they are so annoying."
     },
     {
         name: 'Tobin Heath',

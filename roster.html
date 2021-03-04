@@ -11,10 +11,10 @@
 <body>
 
     <div id="roster">
-        <div id="forwards"><h2>Forwards</h2></div>
-        <div id="midfielders"></div>
-        <div id="defenders"></div>
-        <div id="goalkeepers"></div>
+        <div id="forwards"><h2 onclick="generatePlayers(forwards, forwardsDiv)">Forwards <span>></span></h2></div>
+        <div id="midfielders"><h2 onclick="generatePlayers(midfielders, midfieldersDiv)">Midfielders <span>></span></h2></div>
+        <div id="defenders"><h2 onclick="generatePlayers(defenders, defendersDiv)">Defenders <span>></span></h2></div>
+        <div id="goalkeepers"><h2 onclick="generatePlayers(goalkeepers, goalkeepersDiv)">Goalkeepers <span>></span></h2></div>
     </div>
    
 <script src="js/players.js"></script>

@@ -11,22 +11,27 @@ const defenders = players.filter(player => player.position === 'D');
 const goalkeepers = players.filter(player => player.position === 'GK');
 
 // Create Divs for each player
-forwards.forEach(player => {
-    const newDiv = document.createElement('div');
-    const playerName = document.createElement('h2');
-    playerName.classList.add('player-name');
-    playerName.textContent = player.name;
-    newDiv.appendChild(playerName);
-    const playerHometown = document.createElement('p');
-    playerHometown.classList.add('player-hometown');
-    playerHometown.textContent = player.hometown;
-    newDiv.appendChild(playerHometown);
-    const playerPhoto = player.photo;
-    newDiv.style.backgroundImage = `url(${playerPhoto})`;
-    newDiv.classList.add('forward');
-    newDiv.classList.add('player');
-    forwardsDiv.appendChild(newDiv);
-});
+function generatePlayers(playersArray, targetDiv) {
+    playersArray.forEach(player => {
+        const newDiv = document.createElement('div');
+        const playerName = document.createElement('h2');
+        playerName.classList.add('player-name');
+        playerName.textContent = player.name;
+        newDiv.appendChild(playerName);
+        const playerHometown = document.createElement('p');
+        playerHometown.classList.add('player-hometown');
+        playerHometown.textContent = player.hometown;
+        newDiv.appendChild(playerHometown);
+        const playerBio = document.createElement('p');
+        playerBio.classList.add('player-bio');
+        playerBio.textContent = player.bio;
+        newDiv.appendChild(playerBio);
+        const playerPhoto = player.photo;
+        newDiv.style.backgroundImage = `url(${playerPhoto})`;
+        newDiv.classList.add('player');
+        targetDiv.appendChild(newDiv);
+    });
+}
 
 // Grow Player Box when clicked
 const playerBoxes = document.querySelectorAll('.player');
