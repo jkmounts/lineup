@@ -10,6 +10,13 @@ const midfielders = players.filter(player => player.position === 'M');
 const defenders = players.filter(player => player.position === 'D');
 const goalkeepers = players.filter(player => player.position === 'GK');
 
+// Select playerBoxes to add event Listeners
+let playerBoxes = document.querySelectorAll('.player');
+
+function expandBox() {
+    this.classList.toggle('openPlayer');
+};
+
 // Create Divs for each player
 function generatePlayers(playersArray, targetDiv) {
     playersArray.forEach(player => {
@@ -30,14 +37,8 @@ function generatePlayers(playersArray, targetDiv) {
         newDiv.style.backgroundImage = `url(${playerPhoto})`;
         newDiv.classList.add('player');
         targetDiv.appendChild(newDiv);
+        // Need to re-run a query selector inside function to get the new divs just created
+        playerBoxes = document.querySelectorAll('.player');
+        playerBoxes.forEach(box => box.addEventListener('click', expandBox));
     });
 }
-
-// Grow Player Box when clicked
-const playerBoxes = document.querySelectorAll('.player');
-
-function expandBox() {
-    this.classList.toggle('openPlayer');
-};
-
-playerBoxes.forEach(box => box.addEventListener('click', expandBox));
