@@ -1,29 +1,27 @@
 @import 'normalize.css';
 
-#forwards {
-    display: flex;
-    flex-flow: row wrap;
+h2 {
+    margin: 0;
 }
 
-#forwards>* {
-    flex: 1 1 0;
+#forwards {
+    display: flex;
+    flex-direction: column;
+}
+
+#forwards>div {
     transition: all 2s;
 }
 
-#forwards h1 {
-    flex-basis: 100%;
-}
-
 .player {
-    min-height: 250px;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #c6b2f4;
     background-blend-mode:soft-light;
+    padding: 0.25rem;
 } 
 
 .player-name {
-    writing-mode: vertical-rl;
     margin: 0px;
     color: white;
     text-shadow: 2px 2px black;
@@ -31,4 +29,12 @@
 
 .player-hometown {
     display:none
+}
+
+.open {
+    height: 50vh;
+}
+
+.open>* {
+    display: block;
 }
