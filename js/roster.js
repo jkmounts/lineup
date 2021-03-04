@@ -19,25 +19,32 @@ function expandBox() {
 
 // Create Divs for each player
 function generatePlayers(playersArray, targetDiv) {
+    targetDiv.classList.toggle('open');
     if (!targetDiv.hasChildNodes()) {
         playersArray.forEach(player => {
             const newDiv = document.createElement('div');
+            newDiv.classList.add('player');
+
             const playerName = document.createElement('h2');
             playerName.classList.add('player-name');
             playerName.textContent = player.name;
             newDiv.appendChild(playerName);
+
             const playerHometown = document.createElement('p');
             playerHometown.classList.add('player-hometown');
             playerHometown.textContent = player.hometown;
             newDiv.appendChild(playerHometown);
+
             const playerBio = document.createElement('p');
             playerBio.classList.add('player-bio');
             playerBio.textContent = player.bio;
             newDiv.appendChild(playerBio);
+
             const playerPhoto = player.photo;
             newDiv.style.backgroundImage = `url(${playerPhoto})`;
-            newDiv.classList.add('player');
+            
             targetDiv.appendChild(newDiv);
+
             // Need to re-run a query selector inside function to get the new divs just created
             playerBoxes = document.querySelectorAll('.player');
             playerBoxes.forEach(box => box.addEventListener('click', expandBox));
