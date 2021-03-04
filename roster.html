@@ -10,12 +10,19 @@
 </head>
 <body>
 
-    <div id="roster">
-        <div id="forwards"><h2 onclick="generatePlayers(forwards, forwardsDiv)">Forwards <span>></span></h2></div>
-        <div id="midfielders"><h2 onclick="generatePlayers(midfielders, midfieldersDiv)">Midfielders <span>></span></h2></div>
-        <div id="defenders"><h2 onclick="generatePlayers(defenders, defendersDiv)">Defenders <span>></span></h2></div>
-        <div id="goalkeepers"><h2 onclick="generatePlayers(goalkeepers, goalkeepersDiv)">Goalkeepers <span>></span></h2></div>
-    </div>
+    <main id="roster">
+        <h2 onclick="generatePlayers(forwards, forwardsDiv)">Forwards <span>></span></h2>
+        <div id="forwards"></div>
+        
+        <h2 onclick="generatePlayers(midfielders, midfieldersDiv)">Midfielders <span>></span></h2>
+        <div id="midfielders"></div>
+
+        <h2 onclick="generatePlayers(defenders, defendersDiv)">Defenders <span>></span></h2>
+        <div id="defenders"></div>
+
+        <h2 onclick="generatePlayers(goalkeepers, goalkeepersDiv)">Goalkeepers <span>></span></h2>
+        <div id="goalkeepers"></div>
+    </main>
    
 <script src="js/players.js"></script>
 <script src="js/roster.js"></script>
