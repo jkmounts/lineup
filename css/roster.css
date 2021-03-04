@@ -14,6 +14,7 @@ h2 {
 }
 
 .player {
+    height: 2.5rem;
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #c6b2f4;
@@ -28,13 +29,14 @@ h2 {
 }
 
 .player-hometown {
-    display:none
+    display: none;
+    margin: 0;
 }
 
-.open {
+.openPlayer {
     height: 50vh;
 }
 
-.open>* {
+.openPlayer>* {
     display: block;
 }

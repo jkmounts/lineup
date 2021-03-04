@@ -17,7 +17,7 @@ forwards.forEach(player => {
     playerName.classList.add('player-name');
     playerName.textContent = player.name;
     newDiv.appendChild(playerName);
-    const playerHometown = document.createElement('h3');
+    const playerHometown = document.createElement('p');
     playerHometown.classList.add('player-hometown');
     playerHometown.textContent = player.hometown;
     newDiv.appendChild(playerHometown);
@@ -32,7 +32,7 @@ forwards.forEach(player => {
 const playerBoxes = document.querySelectorAll('.player');
 
 function expandBox() {
-    this.classList.toggle('open');
+    this.classList.toggle('openPlayer');
 };
 
 playerBoxes.forEach(box => box.addEventListener('click', expandBox));
