@@ -60,7 +60,7 @@ header h1 {
     border-radius: 3px;
 }
 
-span:nth-child(1) {
+.hamburger span:nth-child(1) {
     margin-top: 5px;
 }
 

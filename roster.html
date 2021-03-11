@@ -11,17 +11,25 @@
 <body>
 
     <main id="roster">
-        <h2 onclick="generatePlayers(forwards, forwardsDiv)">Forwards <span>></span></h2>
-        <div id="forwards"></div>
+        <div class="position-box">
+            <h2 onclick="generatePlayers(forwards, forwardsDiv)">Forwards <span class="symbol">+</span></h2>
+            <div id="forwards" class="players-container"></div>
+        </div>
         
-        <h2 onclick="generatePlayers(midfielders, midfieldersDiv)">Midfielders <span>></span></h2>
-        <div id="midfielders"></div>
+        <div class="position-box">
+            <h2 onclick="generatePlayers(midfielders, midfieldersDiv)">Midfielders <span class="symbol">+</span></h2>
+            <div id="midfielders" class="players-container"></div>
+        </div>
 
-        <h2 onclick="generatePlayers(defenders, defendersDiv)">Defenders <span>></span></h2>
-        <div id="defenders"></div>
+        <div class="position-box">
+            <h2 onclick="generatePlayers(defenders, defendersDiv)">Defenders <span class="symbol">+</span></h2>
+            <div id="defenders" class="players-container"></div>
+        </div>
 
-        <h2 onclick="generatePlayers(goalkeepers, goalkeepersDiv)">Goalkeepers <span>></span></h2>
-        <div id="goalkeepers"></div>
+        <div class="position-box">
+            <h2 onclick="generatePlayers(goalkeepers, goalkeepersDiv)">Goalkeepers <span class="symbol">+</span></h2>
+            <div id="goalkeepers" class="players-container"></div>
+        </div>
     </main>
    
 <script src="js/players.js"></script>

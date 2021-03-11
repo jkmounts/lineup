@@ -1,11 +1,21 @@
-@import 'normalize.css';
 
 h2 {
     margin: 0;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
 
-main>div {
-    display:none;
+.position-box {
+    border: 2px solid rgb(206, 240, 214);
+    background-color: rgb(206, 240, 214);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 5px;
+}
+
+.players-container {
+    display: none;
 }
 
 .open {
@@ -52,3 +62,4 @@ main>div {
 .openPlayer>* {
     display: block;
 }
+
