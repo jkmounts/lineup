@@ -16,6 +16,7 @@ h2 {
 
 .players-container {
     display: none;
+    margin: 5px;
 }
 
 .open {
@@ -28,9 +29,9 @@ h2 {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #c6b2f4;
-    background-blend-mode:soft-light;
+    background-blend-mode: soft-light;
     padding: 0.25rem;
-    transition: height 2s;
+    transition: all 2s;
 } 
 
 .player:hover {
@@ -43,13 +44,16 @@ h2 {
     text-shadow: 2px 2px black;
 }
 
-.player-hometown {
+.player-details {
     display: none;
+    padding: 10px;
+}
+
+.player-hometown {
     margin: 0;
 }
 
 .player-bio {
-    display: none;
     margin: .25rem 0 0 0;
     font-weight: 200;
     font-size: .85rem;
@@ -61,5 +65,26 @@ h2 {
 
 .openPlayer>* {
     display: block;
+}
+
+@media screen and (min-width: 750px) {
+    .open {
+        flex-flow: row wrap;
+    }
+
+    .player {
+        height: 250px;
+        flex: 1;
+        display: flex;
+    }
+
+    .player-name {
+        writing-mode: vertical-rl;
+    }
+
+    .openPlayer {
+        height: 250px;
+        flex: 8;
+    }
 }
 

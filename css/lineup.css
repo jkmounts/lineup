@@ -135,27 +135,7 @@ footer {
     }
 }
 
-/* Put Nav into Banner at 800px */
-@media screen and (min-width: 800px) {
-    .hamburger {
-        display: none;
-    }
-    
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
 
-    nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    nav a {
-        padding: 0px 10px;
-    }
-}
 
 /* Create visual 'on-field formation' at larger screen sizes */
 @media screen and (min-width: 1000px) {

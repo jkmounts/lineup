@@ -30,18 +30,23 @@ function generatePlayers(playersArray, targetDiv) {
             playerName.textContent = player.name;
             newDiv.appendChild(playerName);
 
+            const detailsDiv = document.createElement('div');
+            detailsDiv.classList.add('player-details');
+
             const playerHometown = document.createElement('p');
             playerHometown.classList.add('player-hometown');
             playerHometown.textContent = player.hometown;
-            newDiv.appendChild(playerHometown);
+            detailsDiv.appendChild(playerHometown);
 
             const playerBio = document.createElement('p');
             playerBio.classList.add('player-bio');
             playerBio.textContent = player.bio;
-            newDiv.appendChild(playerBio);
+            detailsDiv.appendChild(playerBio);
 
             const playerPhoto = player.photo;
             newDiv.style.backgroundImage = `url(${playerPhoto})`;
+
+            newDiv.appendChild(detailsDiv);
             
             targetDiv.appendChild(newDiv);
 
